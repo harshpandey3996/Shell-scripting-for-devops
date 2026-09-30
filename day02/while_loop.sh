@@ -1,9 +1,13 @@
 #!/bin/bash
 
-num=0
+num=1
 
-while [[ $((num % 2)) == 0 && $num -le 10 ]] 
+while [[ $num -le 10 ]] 
 do
-	echo $num
+	if (( num%2==0 )) ; then
+		echo "$num is Even NUmber. "
+	else 
+		echo "$num is Odd Number. "
+	fi
 	num=$((num+1))
 done
